@@ -1,3 +1,1 @@
-export const saludo = (str) => {
-    return `!Hola, ${str}¡`;
-}
+export default (str) => `!Hola, ${str} ¡`;
