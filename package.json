@@ -4,7 +4,10 @@
   "description": "",
   "type": "module",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js",
+    "brain-calc": "bin/brain-calc.js",
+    "brain-angel": "bin/brain-angel.js"
   },
   "main": "brain-games.js",
   "scripts": {
