@@ -2,7 +2,7 @@
 
 import readlineSync from 'readline-sync';
 import brainGames from './brain-games.js';
-import { ramdon1, intentos, rptaJuego } from '../src/funciones.js';
+import { ramdon, intentos, rptaJuego } from '../src/funciones.js';
 
 const jugador = brainGames();
 console.log(jugador);
@@ -13,7 +13,7 @@ let numero;
 let ispar;
 
 while (misIntentos > 0) {
-  numero = ramdon1();
+  numero = ramdon();
   ispar = numero % 2 === 0 ? 'yes' : 'no';
   console.log(`Pregunta ${numero} `);
   const rptaJugador = readlineSync.question('Tu respuesta ');

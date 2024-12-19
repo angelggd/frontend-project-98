@@ -3,7 +3,7 @@ import readlineSync from 'readline-sync';
 import brainGames from './brain-games.js';
 import {
   operacion,
-  ramdon1,
+  ramdon,
   rptaJuego,
   intentos,
 } from '../src/funciones.js';
@@ -14,8 +14,8 @@ const jugador = brainGames();
 
 while (misIntentos > 0) {
   const signo = operacion();
-  const operando = ramdon1();
-  const operador = ramdon1();
+  const operando = ramdon(1, 10);
+  const operador = ramdon(1, 10);
   let resulOperacion = 0;
 
   console.log('¿ Cual es el resultado de la operación ?');
