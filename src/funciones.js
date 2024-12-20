@@ -51,6 +51,22 @@ const mcd = (array1, array2) => {
   return _.max(arrayResult);
 };
 
+const generarProgresion = () => {
+  const items = ramdon(5, 10);
+  let inicio = ramdon();
+  const saltos = ramdon(1, 10);
+  const progresion = [];
+  for (let i = 1; i <= items; i += 1) {
+    if (i === 1) {
+      progresion.push(inicio);
+    } else {
+      inicio += saltos;
+      progresion.push(inicio);
+    }
+  }
+  return progresion;
+};
+
 export {
   intentos,
   ramdon,
@@ -58,4 +74,5 @@ export {
   rptaJuego,
   divisores,
   mcd,
+  generarProgresion,
 };
