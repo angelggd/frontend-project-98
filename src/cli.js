@@ -1,1 +1,1 @@
-export default (str) => `!Hola, ${str} ¡`;
+export default (str) => `!Hola, ${str}¡`;
