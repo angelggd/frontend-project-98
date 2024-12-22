@@ -1,7 +1,4 @@
 # Makefile
-angel: # prueba inicial
-	@echo 'Hola angel, desde Makefile'
-
 install: 
 	npm ci
 
@@ -17,13 +14,8 @@ brain-calc:
 brain-gcd:
 	node bin/brain-gcd.js
 
-brain-angel:
-	node bin/brain-angel.js
-
 publish:
 	npm publish --dry-run
 
 lint:
-	npx eslint .
-
-	
+	npx eslint .	
