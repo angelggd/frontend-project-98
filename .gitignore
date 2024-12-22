@@ -1,6 +1,4 @@
 node_modules/
 
-bin/brain-angel.js
-
 # ignore all cast
 *.cast
