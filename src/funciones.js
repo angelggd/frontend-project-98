@@ -2,7 +2,7 @@ import _ from 'lodash';
 
 const intentos = () => 3;
 
-const ramdon = (lower = 1, upper = 100) => _.random(lower, upper);
+const ramdon = (lower = 1, upper = 30) => _.random(lower, upper);
 
 const operacion = () => {
   const arrayOperaciones = ['+', '-', '*'];
@@ -47,7 +47,7 @@ const divisores = (num) => {
 
 const mcd = (array1, array2) => {
   const arrayResult = _.intersection(array1, array2);
-  console.log(arrayResult);
+  /* console.log(arrayResult); */
   return _.max(arrayResult);
 };
 

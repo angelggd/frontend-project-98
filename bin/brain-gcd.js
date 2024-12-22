@@ -20,7 +20,7 @@ while (misIntentos > 0) {
   num1 = ramdon();
   num2 = ramdon();
   rptaMCD = mcd(divisores(num1), divisores(num2));
-  /* console.log(`Pregunta: ${num1} ${num2}`); */
+  console.log(`Pregunta: ${num1} ${num2}`);
   rptaJugador = readlineSync.question('Tu respuesta: ');
   const result = rptaJuego(jugador, rptaJugador, rptaMCD.toString());
   misIntentos = result ? misIntentos -= 1 : -1;
