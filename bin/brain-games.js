@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import brainGames from '../src/cli.js';
+import brainGames from '../src/games/brain-games';
 
-export default brainGames;
+brainGames();

@@ -1,39 +1,4 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
-import brainGames from './brain-games.js';
-import {
-  operacion,
-  ramdon,
-  rptaJuego,
-  intentos,
-} from '../src/funciones.js';
+import brainCalc from '../src/games/brain-calc.js';
 
-let misIntentos = intentos();
-
-const jugador = brainGames();
-
-while (misIntentos > 0) {
-  const signo = operacion();
-  const operando = ramdon(1, 10);
-  const operador = ramdon(1, 10);
-  let resulOperacion = 0;
-
-  console.log('¿ Cual es el resultado de la operación ?');
-  console.log(`Presunta: ${operando} ${signo} ${operador} `);
-  const rptaJugador = readlineSync.question('Tu Respuesta: ');
-
-  if (signo === '+') {
-    resulOperacion = operando + operador;
-  } else if (signo === '-') {
-    resulOperacion = operando - operador;
-  } else {
-    resulOperacion = operando * operador;
-  }
-
-  const resultado = rptaJuego(jugador, rptaJugador, resulOperacion.toString());
-  misIntentos = resultado ? misIntentos -= 1 : -1;
-}
-
-if (misIntentos === 0) {
-  console.log(`¡Felicidades, ${jugador}!`);
-}
+brainCalc();
