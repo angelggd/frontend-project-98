@@ -47,8 +47,8 @@ const divisores = (num) => {
 
 const mcd = (array1, array2) => {
   const arrayResult = _.intersection(array1, array2);
-  /* console.log(arrayResult); */
-  return _.max(arrayResult);
+  const maxMCD = _.max(arrayResult);
+  return maxMCD;
 };
 
 const generarProgresion = () => {
