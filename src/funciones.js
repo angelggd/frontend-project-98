@@ -32,11 +32,11 @@ const divisores = (num) => {
     arrayY.push(i);
   }
 
-  for (const elementx of arrayX) {
-    for (const elementy of arrayY) {
-      if (elementx * elementy === num) {
-        arrayXY.push(elementx);
-        arrayXY.push(elementy);
+  for (let i = 0; i <= arrayX.length - 1; i += 1) {
+    for (let j = 0; j <= arrayY.length - 1; j += 1) {
+      if (arrayX[i] * arrayY[j] === num) {
+        arrayXY.push(arrayX[i]);
+        arrayXY.push(arrayY[j]);
       }
     }
   }
