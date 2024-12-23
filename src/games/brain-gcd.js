@@ -21,6 +21,8 @@ export default () => {
     num1 = ramdon();
     num2 = ramdon();
     rptaMCD = mcd(divisores(num1), divisores(num2));
+    console.log(divisores(num1));
+    console.log(divisores(num2));
     console.log(`Pregunta: ${num1} ${num2}`);
     rptaJugador = readlineSync.question('Tu respuesta: ');
     const result = rptaJuego(jugador, rptaJugador, rptaMCD.toString());

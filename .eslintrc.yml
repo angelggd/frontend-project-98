@@ -7,3 +7,4 @@ env:
 rules:
   no-console: off  # Desactiva la regla no-console
   import/extensions: off 
+  no-restricted-syntax: ["error", "FunctionExpression", "WithStatement", "BinaryExpression[operator='in']"]

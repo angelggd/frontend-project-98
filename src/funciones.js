@@ -20,29 +20,28 @@ const rptaJuego = (jugador, rptaJugador, rptaCorrecta) => {
 };
 
 const divisores = (num) => {
-  let divisor = 2;
-  const arrayMCD = [];
-  arrayMCD.push(num);
-  let sw = 0;
-  let newNum = num;
-  if (newNum === 1) {
-    arrayMCD.push(1);
-    return arrayMCD;
+  const arrayX = [];
+  const arrayY = [];
+  const arrayXY = [];
+
+  for (let i = 1; i <= num; i += 1) {
+    arrayX.push(i);
   }
 
-  while (sw === 0) {
-    if (newNum === 1) {
-      sw = -1;
-    }
+  for (let i = num; i >= 1; i -= 1) {
+    arrayY.push(i);
+  }
 
-    if (newNum % divisor === 0) {
-      newNum /= divisor;
-      arrayMCD.push(newNum);
-    } else {
-      divisor += 1;
+  for (const elementx of arrayX) {
+    for (const elementy of arrayY) {
+      if (elementx * elementy === num) {
+        arrayXY.push(elementx);
+        arrayXY.push(elementy);
+      }
     }
   }
-  return arrayMCD;
+
+  return _.uniq(arrayXY);
 };
 
 const mcd = (array1, array2) => {
