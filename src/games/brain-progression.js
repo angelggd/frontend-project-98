@@ -24,7 +24,7 @@ export default () => {
       return itemTemp;
     });
     const rptaCorrecta = secuencia[indexOculto];
-    console.log(`Pregunta: ${secuenciaMostrada}`);
+    console.log(`Pregunta: ${secuenciaMostrada.join(' ')}`);
     const rptaJugador = readlineSync.question('Tu respuesta: ');
     const result = rptaJuego(jugador, rptaJugador, rptaCorrecta.toString());
     if (result) {
