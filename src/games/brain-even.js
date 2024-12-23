@@ -15,8 +15,8 @@ export default () => {
   while (misIntentos > 0) {
     numero = ramdon();
     ispar = numero % 2 === 0 ? 'yes' : 'no';
-    console.log(`Pregunta ${numero} `);
-    const rptaJugador = readlineSync.question('Tu respuesta ');
+    console.log(`Pregunta: ${numero}`);
+    const rptaJugador = readlineSync.question('Tu respuesta: ');
     const resultado = rptaJuego(jugador, rptaJugador, ispar);
     misIntentos = resultado ? misIntentos -= 1 : -1;
   }

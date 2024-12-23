@@ -18,8 +18,8 @@ export default () => {
     const operador = ramdon(1, 10);
     let resulOperacion = 0;
 
-    console.log('¿ Cual es el resultado de la operación ?');
-    console.log(`Presunta: ${operando} ${signo} ${operador} `);
+    console.log('¿Cuál es el resultado de la expresión?');
+    console.log(`Pregunta: ${operando} ${signo} ${operador}`);
     const rptaJugador = readlineSync.question('Tu Respuesta: ');
 
     if (signo === '+') {
